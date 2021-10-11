@@ -1,0 +1,236 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  manifest:
+    type: data
+    label: Manifest
+    file: public/manifest.json
+    fields:
+      - type: string
+        name: short_name
+        label: Short Name
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: icons
+        label: Icons
+        items:
+          type: object
+          fields:
+            - type: image
+              name: src
+              label: Src
+            - type: string
+              name: sizes
+              label: Sizes
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: start_url
+        label: Start Url
+      - type: string
+        name: display
+        label: Display
+      - type: string
+        name: theme_color
+        label: Theme Color
+      - type: string
+        name: background_color
+        label: Background Color
+  data:
+    type: data
+    label: Data
+    file: src/containers/Contact/ContactForm/data.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: Class
+          label: Class
+        - type: string
+          name: delay
+          label: Delay
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: title
+          label: Title
+  data_collection_item_profile:
+    type: data
+    label: Data Collection Item Profile
+    file: src/data/data-containers/data-CollectionItem-Profile.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: classIcon
+          label: Class Icon
+  data_collection_item:
+    type: data
+    label: Data Collection Item
+    file: src/data/data-containers/data-CollectionItem.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: classIcon
+          label: Class Icon
+  data_item_details_sidebar_area:
+    type: data
+    label: Data Item Details Sidebar Area
+    file: src/data/data-containers/data-ItemDetails-SidebarArea.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: text1
+          label: Text 1
+        - type: string
+          name: text2
+          label: Text 2
+  data_timeline:
+    type: data
+    label: Data Timeline
+    file: src/data/data-containers/data-Timeline.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_s91pmrst0q
+        - object_ikswekuzhr
+  data_footer:
+    type: data
+    label: Data Footer
+    file: src/data/data-layouts/data-Footer.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_v1c0n70b6p
+        - object_syssj4hdkt
+  data_head:
+    type: data
+    label: Data Head
+    file: src/data/data-layouts/data-Head.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_pwrz4w7lep
+        - object_mt77y68y0l
+  object_s91pmrst0q:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: FullTime
+        label: Full Time
+      - type: string
+        name: Time
+        label: Time
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: text
+        label: Text
+      - type: boolean
+        name: addLink
+        label: Add Link
+      - type: string
+        name: name
+        label: Name
+      - type: number
+        name: bid
+        label: Bid
+        subtype: float
+  object_ikswekuzhr:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: FullTime
+        label: Full Time
+      - type: string
+        name: Time
+        label: Time
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: text
+        label: Text
+      - type: boolean
+        name: addLink
+        label: Add Link
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: bid
+        label: Bid
+  object_v1c0n70b6p:
+    type: object
+    label: Object 3
+    fields:
+      - type: list
+        name: iconsData
+        label: Icons Data
+        items:
+          type: object
+          fields:
+            - type: string
+              name: icoClass
+              label: Ico Class
+  object_syssj4hdkt:
+    type: object
+    label: Object 4
+    fields:
+      - type: list
+        name: infoData
+        label: Info Data
+        items:
+          type: object
+          fields:
+            - type: string
+              name: text
+              label: Text
+  object_pwrz4w7lep:
+    type: object
+    label: Object 5
+    fields:
+      - type: list
+        name: dataUp
+        label: Data Up
+        items:
+          type: object
+          fields:
+            - type: string
+              name: path
+              label: Path
+            - type: string
+              name: title
+              label: Title
+  object_mt77y68y0l:
+    type: object
+    label: Object 6
+    fields:
+      - type: list
+        name: dataDown
+        label: Data Down
+        items:
+          type: object
+          fields:
+            - type: string
+              name: path
+              label: Path
+            - type: string
+              name: title
+              label: Title
